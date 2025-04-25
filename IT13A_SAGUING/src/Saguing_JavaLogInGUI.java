@@ -1,5 +1,5 @@
 
-package saguing_javalogingui;
+package Finals;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,9 +18,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-    public class Saguing_JavaLogInGUI extends JFrame {
 
-    public Saguing_JavaLogInGUI() {
+public class Saguing_GUILogIN_java extends JFrame {
+
+    public Saguing_GUILogIN_java() {
         JTextField jTextFieldUsername = new JTextField();
         JPasswordField jPasswordPassword = new JPasswordField();
         JLabel jLabelUsername = new JLabel("Username:");
@@ -46,7 +47,7 @@ import java.io.IOException;
 
                 boolean found = false;
 
-                try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\adrian kyle\\Desktop\\UserCredential.txt"))) {
+                try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\sagui\\OneDrive\\Documents\\UsersCredentials.txt.txt"))) {
                     String line;
                     while ((line = reader.readLine()) != null) {
                         String[] parts = line.split(",");
@@ -72,7 +73,7 @@ import java.io.IOException;
                 }
             }
         });
-
+        
         jButtonCancel.addActionListener(e -> System.exit(0));
 
         setTitle("Login Form");
@@ -82,8 +83,9 @@ import java.io.IOException;
     }
 
     public static void main(String[] args) {
-        new Saguing_JavaLogInGUI();
-    }
+        new Saguing_GUILogIN_java();
+    }   
 }
+
 
 
